@@ -50,3 +50,29 @@ const sumTwoSmallestNumbers = (numbers) => {
 const numbers = [19, 5, 42, 2, 77]
 console.log(sumTwoSmallestNumbers(numbers));
 ```
+
+## 3.Replace With Alphabet Position
+In this kata you are required to, given a string, replace every letter with its position in the alphabet.
+
+If anything in the text isn't a letter, ignore it and don't return it.
+
+"a" = 1, "b" = 2, etc.
+
+### Python Solution
+```
+def alphabet_position(text):
+    nums = [str(ord(x) - 96) for x in text.lower() if x >= 'a' and x <= 'z']
+    return " ".join(nums)
+```
+
+### JavaScript Solution
+```const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+const alphabetPosition = (text) => {
+    return text
+    .toLowerCase()
+    .replace(/[^a-zA-Z]/g, "")
+    .split("")
+    .map((letter) => alphabet.indexOf(letter) + 1).join(' ');
+}
+alphabetPosition('Hello, How are you today?')
+```
