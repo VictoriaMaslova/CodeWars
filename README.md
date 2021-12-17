@@ -76,3 +76,19 @@ const alphabetPosition = (text) => {
 }
 alphabetPosition('Hello, How are you today?')
 ```
+
+## 4. Factorial using recursion
+```
+const factorial = n => n > 1 ? n * factorial(n - 1) : 1
+
+```
+
+```
+function factorial(n){
+  if(n==1||n==0){
+    return 1;
+  }else{
+    return n*factorial(n-1);
+  }    
+}
+```
